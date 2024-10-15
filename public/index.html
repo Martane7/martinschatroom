@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Chatroom - Passcode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="passcode-container">
+        <h1>Welcome to the Retro Chatroom</h1>
+        <p>Please enter the passcode to proceed:</p>
+        <input type="password" id="passcode" placeholder="Enter passcode">
+        <button onclick="checkPasscode()">Enter</button>
+    </div>
+
+    <script>
+        function checkPasscode() {
+            const passcode = document.getElementById('passcode').value;
+            if (passcode === '5712') {
+                window.location.href = 'chatroom.html';
+            } else {
+                alert('Incorrect passcode, try again!');
+            }
+        }
+    </script>
+</body>
+</html>
